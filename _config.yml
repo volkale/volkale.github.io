@@ -1,2 +1,3 @@
 name: Alexander Volkmann
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
