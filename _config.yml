@@ -1,2 +1,6 @@
 name: Alexander Volkmann
 markdown: kramdown
+mathjax: true
+plugins: ['jekyll/scholar']
+redcarpet:
+    extensions: ["no_intra_emphasis", "tables", "autolink", "strikethrough", "with_toc_data"]
