@@ -1,4 +1,4 @@
-# The Statistical Learning Problem
+## The Statistical Learning Problem
 
 Given a probability space $$ (\Omega,\mathcal A, P)$$ with unknown probability measure $$P$$.
 Consider a function space $$\mathcal F$$ and a *loss function* $$\mathcal L:\Omega\times \mathcal F \to \mathbb R$$. 
