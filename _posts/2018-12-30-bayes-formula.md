@@ -1,8 +1,8 @@
 ## Bayes' Formula
 
 Let $$ (\Omega,\mathcal A, P)$$ be a probability space, and
-$X: (\Omega, \mathcal A) \to (\mathbb R^n, \mathcal{B}^n)$ and
-$Y: (\Omega, \mathcal A) \to (\mathbb R^k, \mathcal{B}^k)$ random variables. 
+$$X: (\Omega, \mathcal A) \to (\mathbb R^n, \mathcal{B}^n)$$ and
+$$Y: (\Omega, \mathcal A) \to (\mathbb R^k, \mathcal{B}^k)$$ random variables. 
 We have the decomposition
 
 $$
@@ -11,7 +11,7 @@ P(X, Y) (A \times B)
 = \int_A P(Y \in B|X=x)\,dP_X(x)
 $$
 
-Choosing $B=B_\varepsilon(y)$ and letting $\varepsilon \searrow 0$ we get, using
+Choosing $$B=B_\varepsilon(y)$$ and letting $$\varepsilon \searrow 0$$ we get, using
 Lebesgue's Differentiation Theorem
 
 $$
