@@ -51,12 +51,14 @@ $$
 
 Using that
 
+$$
 \begin{align}
 E\left[ (Y-E[Y|X])\cdot (f(X)-E[Y|X]) \right]
 &=E\left[E[ (Y-E[Y|X])\cdot (f(X)-E[Y|X])|X]\right] \\
 &=E\left[(f(X)-E[Y|X])\cdot E[ (Y-E[Y|X])|X]\right]\\
 &=E\left[(f(X)-E[Y|X])\cdot 0\right] =0,
 \end{align}
+$$
 
 we obtain
 
