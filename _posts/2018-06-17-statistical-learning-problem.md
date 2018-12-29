@@ -53,8 +53,8 @@ Using that
 
 \begin{align}
 E\left[ (Y-E[Y|X])\cdot (f(X)-E[Y|X]) \right]
-&=E\left[E[ (Y-E[Y|X])\cdot (f(X)-E[Y|X])|X]\right] \\\\
-&=E\left[(f(X)-E[Y|X])\cdot E[ (Y-E[Y|X])|X]\right]\\\\
+&=E\left[E[ (Y-E[Y|X])\cdot (f(X)-E[Y|X])|X]\right] \\
+&=E\left[(f(X)-E[Y|X])\cdot E[ (Y-E[Y|X])|X]\right]\\
 &=E\left[(f(X)-E[Y|X])\cdot 0\right] =0,
 \end{align}
 
@@ -90,9 +90,9 @@ We can decompose the squared $$L^2$$-distance $$E[ |f(X)- \eta(X)|^2]$$ into to 
 
 \begin{align}
 E[ |f(X)- \eta(X)|^2]
-&=E[ |f(X)-E[f(X)]|^2] + E[ |E[f(X)]-\eta(X)|^2] \\\\
-&\quad +2 \underbrace{E[ (f(X)-E[f(X)])}_{=0}\cdot (E[f(X)]-\eta(X))] \\\\
-&=E[ |f(X)-E[f(X)]|^2] + E[ |E[f(X)]-\eta(X)|^2] \\\\
+&=E[ |f(X)-E[f(X)]|^2] + E[ |E[f(X)]-\eta(X)|^2] \\
+&\quad +2 \underbrace{E[ (f(X)-E[f(X)])}_{=0}\cdot (E[f(X)]-\eta(X))] \\
+&=E[ |f(X)-E[f(X)]|^2] + E[ |E[f(X)]-\eta(X)|^2] \\
 &=\text{Varianz} + \text{Bias}
 \end{align}
 
