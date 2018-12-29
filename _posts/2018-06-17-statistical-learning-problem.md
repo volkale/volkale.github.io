@@ -88,6 +88,7 @@ $$E[ |f(X)- \eta(X)|^2]=\int_{\mathcal X} |f(x)- \eta(x)|^2\,dP_X(x)$$ is close 
 ## Bias-Variance Tradeoff
 We can decompose the squared $$L^2$$-distance $$E[ |f(X)- \eta(X)|^2]$$ into to components as follows:
 
+$$
 \begin{align}
 E[ |f(X)- \eta(X)|^2]
 &=E[ |f(X)-E[f(X)]|^2] + E[ |E[f(X)]-\eta(X)|^2] \\
@@ -95,5 +96,6 @@ E[ |f(X)- \eta(X)|^2]
 &=E[ |f(X)-E[f(X)]|^2] + E[ |E[f(X)]-\eta(X)|^2] \\
 &=\text{Varianz} + \text{Bias}
 \end{align}
+$$
 
 regularization -> stability
