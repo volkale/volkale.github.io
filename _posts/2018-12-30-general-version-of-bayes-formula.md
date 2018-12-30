@@ -1,4 +1,4 @@
-## Bayes' Formula
+## The general case
 
 Let $$ (\Omega,\mathcal A, P)$$ be a probability space, and
 $$X: (\Omega, \mathcal A) \to (\mathbb R^n, \mathcal{B}^n)$$ and
@@ -8,7 +8,7 @@ We have the decomposition
 $$
 P_{(Y, X)} (A \times B)
 = \int_B P_{Y|X=x}(A)\,dP_X(x)
-= \int_A P{X|Y=y}(B)\,dP_Y(y)
+= \int_A P_{X|Y=y}(B)\,dP_Y(y)
 $$
 
 Choosing $$B=B_\varepsilon(x)$$ and letting $$\varepsilon \searrow 0$$ we get, using
@@ -16,7 +16,7 @@ Lebesgue's differentiation theorem
 
 $$
 P_{Y |X=x}(A)
-    = \lim_{\varepsilon \searrow 0} \int_A \frac{P{X|Y=y}(B_\varepsilon(x))
+    = \lim_{\varepsilon \searrow 0} \int_A \frac{P_{X|Y=y}(B_\varepsilon(x))
     }{P_X(B_\varepsilon(x)) }\,dP_Y(y)
 \quad\text{for a.e. $x$.}
 $$
@@ -36,7 +36,7 @@ P_{Y|X=x}(A) = \int_A 1\,dP_{Y|X=x}
 \quad\text{for a.e. $x$.}
 $$
 
-From which we get
+from which we get
 
 $$
 \frac{dP_{X|Y=y}}{dP_X}(x) = \frac{dP_{Y|X=x}}{dP_Y}(y)
