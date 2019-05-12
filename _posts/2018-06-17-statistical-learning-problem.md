@@ -22,11 +22,11 @@ and the *output* $$Y: (\Omega,\mathcal A) \to (\mathcal Y,\mathcal A_{\mathcal Y
 Then we can consider the space
 $$\mathcal Z = \mathcal X\times \mathcal Y$$ with the push forward measure
 $$(X,Y)(P)= P_{(X,Y)}=P_X\otimes K$$. Here $$K$$ denotes the regular conditional probability,
-i.e. $$K(x,A)=P(Y\in A|X=x)$$.
+i.e. $$K(x,A)=P(Y\in A|X=x) =: P_{Y|X=x}(A)$$.
 Hence, we may write
 
 $$
-\mathcal R(f)=\int_{\mathcal X} \int_{\mathcal Y} \mathcal L(x,y,f)K(x,dy)\,dP_X(x).
+\mathcal R(f)=\int_{\mathcal X} \int_{\mathcal Y} \mathcal L(x,y,f)dP_{Y|X=x}(y)\,dP_X(x).
 $$
 
 A measurable function $$f^*:\mathcal X \to \mathcal Y$$ such that
@@ -86,6 +86,23 @@ We see that the $$L^2$$-risk of an arbitrary estimator $$f$$ is close to optimal
 if and only if the (squared) $$L^2$$-norm
 $$E[ |f(X)- \eta(X)|^2]=\int_{\mathcal X} |f(x)- \eta(x)|^2\,dP_X(x)$$ is close to zero.
 
+#### Example:
+Consider the random variables $$X,Y$$ such that
+
+$$
+(X, Y) \sim N(0, \Sigma),
+$$
+
+where
+
+$$
+\Sigma = \begin{pmatrix}
+1 & 3 \\
+3 & 2
+\end{pmatrix}
+$$
+
+is the covariance matrix.
 
 ## Bias-Variance Tradeoff
 We can decompose the squared $$L^2$$-distance $$E[ |f(X)- \eta(X)|^2]$$ into to components as follows:
