@@ -102,7 +102,7 @@ is the covariance matrix.
 We have
 
 $$
-Y|X=x \sim \mathcal N(\rho \frac{\sigma_Y}{\sigma_X}x, (1-\rho^2)\sigma_Y)
+Y|X=x \sim \mathcal N \left(\rho \frac{\sigma_Y}{\sigma_X}x, (1-\rho^2)\sigma_Y \right)
 $$
 
 Then the regression function $$\eta$$ is given by
@@ -125,5 +125,3 @@ E[ |f(X)- \eta(X)|^2]
 &=\text{Varianz} + \text{Bias}
 \end{align}
 $$
-
-regularization -> stability
