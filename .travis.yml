@@ -3,7 +3,8 @@ cache: packages
 pandoc_version: 1.17.2
 
 branches:
-  only: gh-pages
+  only:
+    - gh-pages
 
 script:
   - Rscript -e 'servr:::knit_maybe(c(".", "_source", "_posts"), c(".", "_posts", "_posts"), "build.R", "jekyll")'
