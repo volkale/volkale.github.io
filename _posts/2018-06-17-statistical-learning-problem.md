@@ -112,14 +112,3 @@ $$
 $$
 
 ## Bias-Variance Tradeoff
-We can decompose the squared $$L^2$$-distance $$E[ |f(X)- \eta(X)|^2]$$ into to components as follows:
-
-$$
-\begin{align}
-E[ |f(X)- \eta(X)|^2]
-&=E[ |f(X)-E[f(X)]|^2] + E[ |E[f(X)]-\eta(X)|^2] \\
-&\quad +2 \underbrace{E[ (f(X)-E[f(X)])}_{=0}\cdot (E[f(X)]-\eta(X))] \\
-&=E[ |f(X)-E[f(X)]|^2] + E[ |E[f(X)]-\eta(X)|^2] \\
-&=\text{Varianz} + \text{Bias}
-\end{align}
-$$
