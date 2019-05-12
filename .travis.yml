@@ -13,6 +13,7 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_PAT
+  keep_history: true
   on:
     branch: gh-pages
   target_branch: master

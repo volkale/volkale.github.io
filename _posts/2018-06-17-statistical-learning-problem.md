@@ -108,9 +108,7 @@ $$
 Then the regression function $$\eta$$ is given by
 
 $$
-\begin{align}
-\eta(x) & = \int y \,dP_{Y|X=x}(y) \\
-= \rho \frac{\sigma_Y}{\sigma_X}x
+\eta(x) = \rho \frac{\sigma_Y}{\sigma_X}x
 $$
 
 ## Bias-Variance Tradeoff
