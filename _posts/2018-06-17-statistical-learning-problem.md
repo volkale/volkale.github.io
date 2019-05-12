@@ -90,19 +90,28 @@ $$E[ |f(X)- \eta(X)|^2]=\int_{\mathcal X} |f(x)- \eta(x)|^2\,dP_X(x)$$ is close 
 Consider the random variables $$X,Y$$ such that
 
 $$
-(X, Y) \sim N(0, \Sigma),
-$$
-
-where
-
-$$
+(X, Y) \sim \mathcal N(0, \Sigma),\text{ where }
 \Sigma = \begin{pmatrix}
-1 & 3 \\
-3 & 2
+\sigma_X & \rho \sigma_X\sigma_Y \\
+\rho \sigma_X\sigma_Y & \sigma_Y
 \end{pmatrix}
 $$
 
 is the covariance matrix.
+
+We have
+
+$$
+Y|X=x \sim \mathcal N(\rho \frac{\sigma_Y}{\sigma_X}x, (1-\rho^2)\sigma_Y)
+$$
+
+Then the regression function $$\eta$$ is given by
+
+$$
+\begin{align}
+\eta(x) & = \int y \,dP_{Y|X=x}(y) \\
+= \rho \frac{\sigma_Y}{\sigma_X}x
+$$
 
 ## Bias-Variance Tradeoff
 We can decompose the squared $$L^2$$-distance $$E[ |f(X)- \eta(X)|^2]$$ into to components as follows:

@@ -4,4 +4,8 @@ mathjax: true
 plugins: ['jekyll/scholar']
 redcarpet:
     extensions: ["no_intra_emphasis", "tables", "autolink", "strikethrough", "with_toc_data"]
-permalink: /blog/:year/:month/:day/:title
+
+
+baseurl:  # must correspond to repository name for project sites
+baseurlknitr: / # where servr::jekyll (i.e. knitr) looks for images
+url: https://volkale.github.io/ # so links find their way back to homepage
