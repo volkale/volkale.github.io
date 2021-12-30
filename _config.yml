@@ -9,3 +9,5 @@ redcarpet:
 baseurl:  # must correspond to repository name for project sites
 baseurlknitr: / # where servr::jekyll (i.e. knitr) looks for images
 url: https://volkale.github.io/ # so links find their way back to homepage
+
+google_analytics: UA-216099439-1
