@@ -16,25 +16,32 @@
 
 		</head>
 		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
+			    <div class="container content">
+        <header class="masthead">
 
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:alexv@gmx.de">email</a></li>
-	        		<li><a href="https://github.com/volkale">github.com/volkale</a></li>
-				<li><a href="/privacy">privacy policy</a></li>
-				</ul>
-			
-			</footer>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+            {{ content }}
+        </main>
+
+        <footer>
+
+            <ul>
+                <li><a href="mailto:alexv@gmx.de">email</a></li>
+                <li><a href="https://github.com/volkale">github.com/volkale</a></li>
+                <li><a href="/privacy">privacy policy</a></li>
+            </ul>
+
+        </footer>
+    </div>
 			
 		{% include cookie_consent.html %}
 			
