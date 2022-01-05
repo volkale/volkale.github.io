@@ -18,24 +18,22 @@ Let us consider the following fictitious example
 in which Larry the analyst of the internet company Nozama runs a 1-week-long A/B test.
 His data shows the following 
 
-{% highlight html %}
 
 |             | control | test |
 |-------------|---------|------|
 | users       | 35000    | 35000 |
 | conversions | 1394     | 1666   |
 
-{% endhighlight %}
 
 Larry uses python to compute the p-value of the Fisher exact statistic
 
-```python
+{% highlight python %}
 from scipy import stats
 
 data = [[1394, 1666], [35000 - 1394, 35000 - 1666]]
 pval = stats.fisher_exact(data)[1]
 print(pval)
-``` 
+{% endhighlight %}
 
 The result is `5.365752694746135e-07` which is \"statistically significant\" w.r.t. to Larry\'s predefined 5%
 significance level.
