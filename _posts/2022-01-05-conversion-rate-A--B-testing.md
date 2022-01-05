@@ -66,8 +66,8 @@ geometric distribution.
 
 We can write the pdf and cdf (for $$k<\infty$$) of $$X$$ as follows:
 
-$$P(X=k) = (1-p)\cdot \bold{1}_{\{k=\infty\}}
-+ p\cdot (\pi\cdot \bold{1}_{\{k=0\}} + (1-\pi)\cdot\lambda \cdot(1-\lambda)^k\cdot \bold{1}_{\{k\geq 0\}})$$
+$$P(X=k) = (1-p)\cdot \mathbb{1}_{\{k=\infty\}}
++ p\cdot (\pi\cdot \mathbb{1}_{\{k=0\}} + (1-\pi)\cdot\lambda \cdot(1-\lambda)^k\cdot \mathbb{1}_{\{k\geq 0\}})$$
 
 $$
 F(k) = P(X \leq k) = 
