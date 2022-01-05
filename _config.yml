@@ -8,19 +8,7 @@ redcarpet:
 
 plugins:
   - jekyll-scholar
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-octicons
-  - jekyll-github-metadata
-  - jekyll-toc
-  - jekyll-twitter-plugin
-  - jekyll-relative-links
-  - jekyll-seo-tag
-
-titles_from_headings:
-  enabled:     true
-  strip_title: true
-  collections: true
+  - jekyll-pagination
 
 highlighter: rouge
 markdown: kramdown
