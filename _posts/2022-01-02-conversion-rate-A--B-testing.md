@@ -61,14 +61,13 @@ knowledge at hand we take a new (Bayesian) approach to analysing the test result
 
 We make the following model assumptions:
 
-\begin{itemize}
-\item $$p$$ = probability of conversion
-\item $$X$$ = lag in days between user website visit and conversion, where $$X=\infty$$ corresponds to no conversion
-\item Conditional on a conversion, we assume that the lag variable $$X$$ is distributed according to a zero-inflated
+* $$p$$ = probability of conversion
+* $$X$$ = lag in days between user website visit and conversion, where $$X=\infty$$ corresponds to no conversion
+* Conditional on a conversion, we assume that the lag variable $$X$$ is distributed according to a zero-inflated
 geometric distribution. In formulas:
 $$P(X=k) = (1-p)\cdot \bold{1}_{\{k=\infty\}}
 + p\cdot (\pi\cdot \bold{1}_{\{k=0\}} + (1-\pi)\cdot\lambda \cdot(1-\lambda)^k\cdot \bold{1}_{\{k\geq 0\}})$$
-\end{itemize}
+
 
 We then can write the cdf of $$X$$ as follows (for $$k<\infty$$)
 $$
