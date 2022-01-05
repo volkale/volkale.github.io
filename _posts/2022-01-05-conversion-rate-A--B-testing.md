@@ -62,12 +62,13 @@ We make the following model assumptions:
 * $$p$$ = probability of conversion
 * $$X$$ = lag in days between user website visit and conversion, where $$X=\infty$$ corresponds to no conversion
 * Conditional on a conversion, we assume that the lag variable $$X$$ is distributed according to a zero-inflated
-geometric distribution. In formulas:
+geometric distribution. 
+
+We can write the pdf and cdf (for $$k<\infty$$) of $$X$$ as follows:
+
 $$P(X=k) = (1-p)\cdot \bold{1}_{\{k=\infty\}}
 + p\cdot (\pi\cdot \bold{1}_{\{k=0\}} + (1-\pi)\cdot\lambda \cdot(1-\lambda)^k\cdot \bold{1}_{\{k\geq 0\}})$$
 
-
-We then can write the cdf of $$X$$ as follows (for $$k<\infty$$)
 $$
 F(k) = P(X \leq k) = 
 p(1 -(1-\pi)(1-\lambda)^{k+1}).
