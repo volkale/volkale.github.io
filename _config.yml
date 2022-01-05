@@ -5,6 +5,12 @@ plugins: ['jekyll/scholar']
 redcarpet:
     extensions: ["no_intra_emphasis", "tables", "autolink", "strikethrough", "with_toc_data"]
 
+kramdown:
+  syntax_highlighter: coderay
+  syntax_highlighter_opts:
+    line_numbers: table
+    bold_every: 5
+    
 
 baseurl:  # must correspond to repository name for project sites
 baseurlknitr: / # where servr::jekyll (i.e. knitr) looks for images
