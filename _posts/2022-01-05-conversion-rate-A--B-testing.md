@@ -35,7 +35,7 @@ pval = stats.fisher_exact(data)[1]
 print(pval)
 {% endhighlight %}
 
-The result is `5.365752694746135e-07` which is \"statistically significant\" w.r.t. to Larry\'s predefined 5%
+The result is 5.4e-07 which is \"statistically significant\" w.r.t. to Larry\'s predefined 5%
 significance level.
 
 Larry can\'t believe it, the new version improved the user conversion by 19.5%! 
@@ -66,8 +66,7 @@ geometric distribution.
 
 We can write the pdf and cdf (for $$k<\infty$$) of $$X$$ as follows:
 
-$$P(X=k) = (1-p)\cdot \mathbb{1}_{\{k=\infty\}}
-+ p\cdot (\pi\cdot \mathbb{1}_{\{k=0\}} + (1-\pi)\cdot\lambda \cdot(1-\lambda)^k\cdot \mathbb{1}_{\{k\geq 0\}})$$
+$$P(X=k) = (1-p)\cdot \mathbb{1}_{\{k=\infty\}} + p\cdot (\pi\cdot \mathbb{1}_{\{k=0\}} + (1-\pi)\cdot\lambda \cdot(1-\lambda)^k\cdot \mathbb{1}_{\{k\geq 0\}})$$
 
 $$
 F(k) = P(X \leq k) = 
