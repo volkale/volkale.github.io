@@ -46,9 +46,9 @@ generating process.
 *So what exactly are the assumptions that Larry implicitly used in his analysis ?*
 
 For the Fisher exact test we need to assume that we have independent, identically distributed conversion events. More
-precisely, we need to assume that (for each group) $ Conversions \sim Bin(users, p) $ for some probability $p$, i.e. that
-the number of conversions in each group are drawn from a Binomial distribution with $n=$number of users and some fixed
-probability $p$ (the conversion rate).
+precisely, we need to assume that (for each group) $$Conversions \sim Bin(users, p)$$ for some probability $$p$$, i.e. that
+the number of conversions in each group are drawn from a Binomial distribution with $$n=$$number of users and some fixed
+probability $$p$$ (the conversion rate).
 
 ### A smarter approach
 Using domain knowledge about how people on the website behave we know users that land on the website don\'t all
@@ -58,15 +58,15 @@ knowledge at hand we take a new (Bayesian) approach to analysing the test result
 We make the following model assumptions:
 
 \begin{itemize}
-\item $p$ = probability of conversion
-\item $X$ = lag in days between user website visit and conversion, where $X=\infty$ corresponds to no conversion
-\item Conditional on a conversion, we assume that the lag variable $X$ is distributed according to a zero-inflated
+\item $$p$$ = probability of conversion
+\item $$X$$ = lag in days between user website visit and conversion, where $$X=\infty$$ corresponds to no conversion
+\item Conditional on a conversion, we assume that the lag variable $$X$$ is distributed according to a zero-inflated
 geometric distribution. In formulas:
 $$P(X=k) = (1-p)\cdot \bold{1}_{\{k=\infty\}}
 + p\cdot (\pi\cdot \bold{1}_{\{k=0\}} + (1-\pi)\cdot\lambda \cdot(1-\lambda)^k\cdot \bold{1}_{\{k\geq 0\}})$$
 \end{itemize}
 
-We then can write the cdf of $X$ as follows (for $k<\infty$)
+We then can write the cdf of $$X$$ as follows (for $$k<\infty$$)
 $$
 F(k) = P(X \leq k) = 
 p(1 -(1-\pi)(1-\lambda)^{k+1}).
@@ -125,30 +125,30 @@ functions{
 }
 ```
 Because we know that the typical conversion rate of our website is around 5% and unlikely to be larger than 10% we put a
-$Beta(2, 38)$-prior on the $p$-parameter. 
+$$Beta(2, 38)$$-prior on the $$p$$-parameter. 
 We also know that there are disproportionally many users that convert on the day of their first visit which is why we
-assume a non-negative value of $\pi$ but with slightly more weight towards $0$ which leads us to specify the prior
-$\pi\sim Beta(1,2)$. Finally, we put a non-informative uniform prior on the \"success\"-probability $\lambda$.
-Note, that values $\max\{-1, \frac{-(1-\lambda)}{\lambda}\} \leq \pi < 1$ would still give a well-defined model,
+assume a non-negative value of $$\pi$$ but with slightly more weight towards $$0$$ which leads us to specify the prior
+$$\pi\sim Beta(1,2)$$. Finally, we put a non-informative uniform prior on the \"success\"-probability $$\lambda$$.
+Note, that values $$\max\{-1, \frac{-(1-\lambda)}{\lambda}\} \leq \pi < 1$$ would still give a well-defined model,
 and would allow for a zero-*deflated* geometric distribution as well.
 
 
 You can find our complete Stan model [here](https://github.com/volkale/convpybayes/blob/main/stan/disconvpy.stan).
 
-Fitting the model to the data above we obtain the following posterior distributions for $p$ for the test and control
+Fitting the model to the data above we obtain the following posterior distributions for $$p$$ for the test and control
 groups, respectively.
 
-![posterior distribution of $p$](../images/posteriorCVR.png)
+![posterior distribution of $$p$$](../../../images/posteriorCVR.png)
 
 As we can clearly see from the plot we are almost 100% certain (given the model and the data) that our control version
-has a higher conversion rate $p$ than the new test variant. So we should definitively not accept the new website
+has a higher conversion rate $$p$$ than the new test variant. So we should definitively not accept the new website
 variant.
 
 **How is this possible ?**
 
-By inspecting all the posterior parameters of the model (not just the conversion rate $p$) we see that the new website
-increased the parameters $\pi$ and $\lambda$ of our zero-inflated geometric distribution of the time-to-conversion
-(aka lag) variable $X$, i.e\. although users convert less frequently under the new website version, the ones that do, do
+By inspecting all the posterior parameters of the model (not just the conversion rate $$p$$) we see that the new website
+increased the parameters $$\pi$$ and $$\lambda$$ of our zero-inflated geometric distribution of the time-to-conversion
+(aka lag) variable $$X$$, i.e\. although users convert less frequently under the new website version, the ones that do, do
 so with a smaller time lag from their initial website visit.
 
 Looking at what the new website version does, this seems plausible: the new website version implemented urgency features
@@ -157,7 +157,7 @@ would drastically increase in price. This lead to the fact that some users were 
 design, and now didn\'t convert anymore even though they might have under the old version, and the ones that still did,
 now did so without letting too much time go by.
 
-![visit vs. conversion date frequencies](../images/vc_date.png)
+![visit vs. conversion date frequencies](../../../images/vc_date.png)
 
 Of course, at this point this can only be a hypothesis that is based on domain knowledge about how users typically react
 to certain changes and that fits with the data observed in this experiment. This cannot be so easily proven.
