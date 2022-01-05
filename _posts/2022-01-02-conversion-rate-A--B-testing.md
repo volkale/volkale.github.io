@@ -166,13 +166,13 @@ that some users are affected differently by the change than others. We will leav
 heterogeneity for another blog post in the future.
 
 ## Conclusions
-- Assumptions matter for correct decision making; think about the data generating process; domain knowledge is important 
-- Be careful when using lagged response variables in A/B testing 
-- Bayesian stats and Stan are awesome ;)
+* Assumptions matter for correct decision making; think about the data generating process; domain knowledge is important 
+* Be careful when using lagged response variables in A/B testing 
+* Bayesian stats and Stan are awesome ;)
 
 
 ## References / further reading
-- Our model was inspired by the continuous (frequentist) conversion model that was proposed in the 2014 KDD paper
-\"Modeling delayed feedback in display advertising\" by Olivier Chapelle (https://doi.org/10.1145/2623330.2623634).
-- Check out the ![Stan manual](https://mc-stan.org/docs/2_28/stan-users-guide/censored-data.html#censored-data) on
+* Our model was inspired by the continuous (frequentist) conversion model that was proposed in the [2014 KDD paper](https://doi.org/10.1145/2623330.2623634)
+\"Modeling delayed feedback in display advertising\" by Olivier Chapelle.
+* Check out the [Stan manual](https://mc-stan.org/docs/2_28/stan-users-guide/censored-data.html#censored-data) on
 estimating censored values.
