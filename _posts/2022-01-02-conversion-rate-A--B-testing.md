@@ -33,10 +33,10 @@ pval = stats.fisher_exact(data)[1]
 print(pval)
 ``` 
 
-The result is `5.365752694746135e-07` which is \"statistically significant\" w.r.t. to Larry\'s predefined 5\%
+The result is `5.365752694746135e-07` which is \"statistically significant\" w.r.t. to Larry\'s predefined 5%
 significance level.
 
-Larry can\'t believe it, the new version improved the user conversion by `19.5%`! 
+Larry can\'t believe it, the new version improved the user conversion by 19.5%! 
 
 **But has it really ?**
 
@@ -46,7 +46,7 @@ generating process.
 *So what exactly are the assumptions that Larry implicitly used in his analysis ?*
 
 For the Fisher exact test we need to assume that we have independent, identically distributed conversion events. More
-precisely, we need to assume that (for each group) $Conversions \sim Bin(users, p)$ for some probability $p$, i.e. that
+precisely, we need to assume that (for each group) $ Conversions \sim Bin(users, p) $ for some probability $p$, i.e. that
 the number of conversions in each group are drawn from a Binomial distribution with $n=$number of users and some fixed
 probability $p$ (the conversion rate).
 
@@ -175,4 +175,4 @@ heterogeneity for another blog post in the future.
 - Our model was inspired by the continuous (frequentist) conversion model that was proposed in the 2014 KDD paper
 \"Modeling delayed feedback in display advertising\" by Olivier Chapelle (https://doi.org/10.1145/2623330.2623634).
 - Check out the ![Stan manual](https://mc-stan.org/docs/2_28/stan-users-guide/censored-data.html#censored-data) on
-estimating censored vales.
+estimating censored values.
