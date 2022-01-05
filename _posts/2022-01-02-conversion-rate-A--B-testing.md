@@ -18,10 +18,14 @@ Let us consider the following fictitious example
 in which Larry the analyst of the internet company Nozama runs a 1-week-long A/B test.
 His data shows the following 
 
+{% highlight html %}
+
 |             | control | test |
 |-------------|---------|------|
 | users       | 35000    | 35000 |
 | conversions | 1394     | 1666   |
+
+{% endhighlight %}
 
 Larry uses python to compute the p-value of the Fisher exact statistic
 
