@@ -138,7 +138,7 @@ Note, that values $$\max\{-1, \frac{-(1-\lambda)}{\lambda}\} \leq \pi < 1$$ woul
 and would allow for a zero-*deflated* geometric distribution as well.
 
 
-You can find our complete Stan model [here](https://github.com/volkale/convpybayes/blob/main/stan/disconvpy.stan).
+You can find our complete Stan model [here](https://github.com/volkale/convpybayes/blob/main/src/stan/disconvpy.stan).
 
 Fitting the model to the data above we obtain the following posterior distributions for $$p$$ for the test and control
 groups, respectively.
