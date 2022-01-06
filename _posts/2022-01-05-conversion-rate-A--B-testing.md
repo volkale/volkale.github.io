@@ -27,14 +27,13 @@ His data shows the following
 
 Larry uses python to compute the p-value of the Fisher exact statistic
 
-{% highlight python %}
+```python
 from scipy import stats
 
 data = [[1394, 1666], [35000 - 1394, 35000 - 1666]]
 pval = stats.fisher_exact(data)[1]
 print(pval)
-{% endhighlight %}
-
+```
 The result is 5.4e-07 which is \"statistically significant\" w.r.t. to Larry\'s predefined 5%
 significance level.
 
@@ -96,6 +95,8 @@ A subsample of our data looks as follows:
 
 
 ![visualization of censored data](../../../images/censored_data.png)
+*visualization of censored data*
+
 
 We can write a Stan program in order to fit a model on the test and control data separately. We use Stan\'s custom
 distribution functions capability (see [here](https://link.springer.com/article/10.3758/s13428-016-0746-9) for a
@@ -143,6 +144,7 @@ Fitting the model to the data above we obtain the following posterior distributi
 groups, respectively.
 
 ![posterior distribution of $$p$$](../../../images/posteriorCVR.png)
+*posterior distribution of $$p$$*
 
 As we can clearly see from the plot we are almost 100% certain (given the model and the data) that our control version
 has a higher conversion rate $$p$$ than the new test variant. So we should definitively not accept the new website
@@ -162,6 +164,7 @@ design, and now didn\'t convert anymore even though they might have under the ol
 now did so without letting too much time go by.
 
 ![visit vs. conversion date frequencies](../../../images/vc_date.png)
+*visit vs. conversion date frequencies*
 
 Of course, at this point this can only be a hypothesis that is based on domain knowledge about how users typically react
 to certain changes and that fits with the data observed in this experiment. This cannot be so easily proven.
