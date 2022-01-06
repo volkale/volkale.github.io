@@ -94,6 +94,9 @@ A subsample of our data looks as follows:
 | 2021-12-02   | 2021-12-02        |         199 |            0 |
 | 2021-12-02   | None              |        4762 |            0 |
 
+
+![visualization of censored data](../../../images/censored_data.png)
+
 We can write a Stan program in order to fit a model on the test and control data separately. We use Stan\'s custom
 distribution functions capability (see [here](https://link.springer.com/article/10.3758/s13428-016-0746-9) for a
 tutorial) to code the pmf, cdf, inverse cdf and ccdf of our model as follows:
