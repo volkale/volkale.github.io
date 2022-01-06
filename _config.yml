@@ -18,9 +18,6 @@ kramdown:
   auto_ids: true
   hard_wrap: false
   syntax_highlighter: coderay
-  syntax_highlighter_opts:
-    line_numbers: table
-    bold_every: 5
     
 
 baseurl:  # must correspond to repository name for project sites
