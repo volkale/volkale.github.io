@@ -63,9 +63,9 @@ We make the following model assumptions:
 * Conditional on a conversion, we assume that the lag variable $$X$$ is distributed according to a zero-inflated
 geometric distribution. 
 
-We can write the pdf and cdf (for $$k<\infty$$) of $$X$$ as follows:
+We can write the pmf and cdf (for $$k<\infty$$) of $$X$$ as follows:
 
-$$P(X=k) = (1-p)\cdot \mathbb{1}_{\{k=\infty\}} + p\cdot (\pi\cdot \mathbb{1}_{\{k=0\}} + (1-\pi)\cdot\lambda \cdot(1-\lambda)^k\cdot \mathbb{1}_{\{k\geq 0\}})$$
+$$P(X=k) = (1-p)\cdot \mathbb{1}_{\{\infty\}}(k) + p\cdot (\pi\cdot \mathbb{1}_{\{0\}}(k) + (1-\pi)\cdot\lambda \cdot(1-\lambda)^k\cdot \mathbb{1}_{\{\geq 0\}}(k))$$
 
 $$
 F(k) = P(X \leq k) = 
