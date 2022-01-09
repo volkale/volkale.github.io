@@ -196,14 +196,14 @@ also depends on how strong the effect of the test is on the lag parameters $$\pi
 the conversion parameter $$p$$.
 For the simulated data set we can see how Larry\'s conclusion would have differed, had he run the test for different
 durations.
-![](../../../images/results_by_test_days.png.png)
-*Fisher\'s exact test results by test duration*
+![results by test duration](../../../images/results_by_test_days.png.png)
+*Fisher\'s exact test results by test duration*\
 Any test duration up to 13 days would have lead Larry to make the wrong conclusion about the test performance.
 For a test duration between 14 days to 3 weeks Larry would have failed to reject the null hypothesis (at least not
 wrongfully accepting an inferior website version). Only for a longer test duration would Larry have concluded that the
 test version actually performs worse than the control version (w.r.t. the CVR as KPI for the test).
 We can see that even after 6 weeks of testing the calculated odds ratio (i.e. the ratio of the conversion rates of both
-groups) is still almost 7% larger than the true odds ratio in this example.
+groups) is still almost 7% larger than the true odds ratio in this example.\
 In summary, letting the test run longer can be a solution to avoid more complicated stats in certain (many?) situations.
 A counterargument to that could be that using the proposed conversion lag model allows to reduce testing time while
 still coming to the correct conclusion.
