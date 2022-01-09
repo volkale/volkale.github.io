@@ -196,7 +196,7 @@ also depends on how strong the effect of the test is on the lag parameters $$\pi
 the conversion parameter $$p$$.
 For the simulated data set we can see how Larry\'s conclusion would have differed, had he run the test for different
 durations.
-![results by test duration](../../../images/results_by_test_days.png.png)
+![results by test duration](../../../images/results_by_test_days.png)
 *Fisher\'s exact test results by test duration*\
 Any test duration up to 13 days would have lead Larry to make the wrong conclusion about the test performance.
 For a test duration between 14 days to 3 weeks Larry would have failed to reject the null hypothesis (at least not
