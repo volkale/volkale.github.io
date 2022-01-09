@@ -3,7 +3,7 @@
 Many internet companies use A/B testing to evaluate the performance of website changes they
 want to make. A typical metric in such scenarios is the conversion rate (CVR) of a user, i.e\. the probability
 that a user converts (e.g\. makes a purchase) on the website.
-A typical A/B test setup in such a situation would randomize users into to (equally sized) groups:
+A typical A/B test setup in such a situation would randomize users into two (equally sized) groups:
 the test group that would be exposed to the new experience and the control group that would
 be exposed to the status quo version of the website.
 
@@ -183,3 +183,28 @@ heterogeneity for another blog post in the future.
 \"Modeling delayed feedback in display advertising\" by Olivier Chapelle.
 * Check out the [Stan manual](https://mc-stan.org/docs/2_28/stan-users-guide/censored-data.html#censored-data) on
 estimating censored values.
+
+
+## Additions
+
+1. 20220109 - *In response to some comments on [Hacker News](https://news.ycombinator.com/item?id=29837922)*
+### Could Larry have just let the test run longer to make the correct inference ?
+Letting the test run longer can be a method to avoid drawing wrong conclusions using the simpler approach of e.g. 
+performing Fisher\'s exact test. The necessary test duration however, very much depends on the typical lag that is
+expected between visit and conversion (which can vary, e.g. by industry and also the attribution model used). It
+also depends on how strong the effect of the test is on the lag parameters $$\pi$$ and $$\lambda$$ vs. the effect on
+the conversion parameter $$p$$.
+For the simulated data set we can see how Larry\'s conclusion would have differed, had he run the test for different
+durations.
+![](../../../images/results_by_test_days.png.png)
+*Fisher\'s exact test results by test duration*
+Any test duration up to 13 days would have lead Larry to make the wrong conclusion about the test performance.
+For a test duration between 14 days to 3 weeks Larry would have failed to reject the null hypothesis (at least not
+wrongfully accepting an inferior website version). Only for a longer test duration would Larry have concluded that the
+test version actually performs worse than the control version (w.r.t. the CVR as KPI for the test).
+We can see that even after 6 weeks of testing the calculated odds ratio (i.e. the ratio of the conversion rates of both
+groups) is still almost 7% larger than the true odds ratio in this example.
+In summary, letting the test run longer can be a solution to avoid more complicated stats in certain (many?) situations.
+A counterargument to that could be that using the proposed conversion lag model allows to reduce testing time while
+still coming to the correct conclusion.
+Best is to use domain knowledge and business judgment to decide on how to best proceed in any given real-life situation.
