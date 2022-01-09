@@ -188,7 +188,7 @@ estimating censored values.
 ## Additions
 
 1. 20220109 - *In response to some comments on [Hacker News](https://news.ycombinator.com/item?id=29837922)*
-### Could Larry have just let the test run longer to make the correct inference ?
+### Could Larry have just let the test run longer to make the correct decision ?
 Letting the test run longer can be a method to avoid drawing wrong conclusions using the simpler approach of e.g. 
 performing Fisher\'s exact test. The necessary test duration however, very much depends on the typical lag that is
 expected between visit and conversion (which can vary, e.g. by industry and also the attribution model used). It
@@ -206,5 +206,5 @@ We can see that even after 6 weeks of testing the calculated odds ratio (i.e. th
 groups) is still almost 7% larger than the true odds ratio in this example.\
 In summary, letting the test run longer can be a solution to avoid more complicated stats in certain (many?) situations.
 A counterargument to that could be that using the proposed conversion lag model allows to reduce testing time while
-still coming to the correct conclusion.
+still coming to the correct conclusion.\
 Best is to use domain knowledge and business judgment to decide on how to best proceed in any given real-life situation.
