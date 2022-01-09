@@ -205,6 +205,6 @@ test version actually performs worse than the control version (w.r.t. the CVR as
 We can see that even after 6 weeks of testing the calculated odds ratio (i.e. the ratio of the conversion rates of both
 groups) is still almost 7% larger than the true odds ratio in this example.\
 In summary, letting the test run longer can be a solution to avoid more complicated stats in certain (many?) situations.
-A counterargument to that could be that using the proposed conversion lag model allows to reduce testing time while
+An argument in favor of using the proposed conversion lag model is that it allows to reduce testing time while
 still coming to the correct conclusion.\
 Best is to use domain knowledge and business judgment to decide on how to best proceed in any given real-life situation.
